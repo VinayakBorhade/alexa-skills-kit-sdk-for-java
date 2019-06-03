@@ -17,6 +17,9 @@ import com.amazon.ask.Skill;
 import com.amazon.ask.Skills;
 import com.amazon.ask.SkillStreamHandler;
 import com.amazon.ask.helloworld.handlers.*;
+import com.amazon.ask.helloworld.handlers.multiturnDialogHandlers.CompletedCompareIntentHandler;
+import com.amazon.ask.helloworld.handlers.multiturnDialogHandlers.InProgressCompareIntentHandler;
+import com.amazon.ask.helloworld.handlers.multiturnDialogHandlers.StartedCompareIntentHandler;
 
 public class HelloWorldStreamHandler extends SkillStreamHandler {
 
@@ -30,7 +33,10 @@ public class HelloWorldStreamHandler extends SkillStreamHandler {
                         new SessionEndedRequestHandler(),
                         new FallbackIntentHandler(),
                         new FeaturesIntentHandler(),
-                        new CompareIntentHandler()
+                        //new CompareIntentHandler(),
+                        new StartedCompareIntentHandler(),
+                        new InProgressCompareIntentHandler(),
+                        new CompletedCompareIntentHandler()
                 )
                 // Add your skill id below
                 .withSkillId("amzn1.ask.skill.da050a22-9b88-4fd6-9012-8e042d85af93")
