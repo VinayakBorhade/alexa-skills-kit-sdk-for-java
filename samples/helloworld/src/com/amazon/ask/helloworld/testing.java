@@ -1,5 +1,7 @@
 package com.amazon.ask.helloworld;
 
+import org.apache.commons.codec.language.Metaphone;
+
 import java.net.HttpURLConnection;
 import java.net.URL;
 
@@ -11,7 +13,10 @@ public class testing{
     public static void main(String[] args) throws  Exception{
         //FeaturesIntentHandler featuresIntentHandler=new FeaturesIntentHandler();
         //Optional<Response> response=featuresIntentHandler.handle(null);
-        func();
+        //func();
+        Metaphone m=new Metaphone();
+        System.out.println(m.encode("Baatein"));
+        System.out.println(m.encode("Nahin"));
     }
 
 
